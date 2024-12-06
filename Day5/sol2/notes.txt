@@ -1,0 +1,19 @@
+fmt.Println(cur_update)
+							fmt.Printf("swapping: j = %d with %d and k = %d with %d\n", j, cur_rules[l], k, cur_number)
+							cur_update[j] = strconv.Itoa(cur_rules[l])
+							cur_update[k] = strconv.Itoa(cur_number)
+
+							var cur_prev []int
+							for m := range(j) {
+								val, err := strconv.Atoi(cur_update[m])
+								if err != nil {
+									panic(err)
+								}
+
+								cur_prev = append(cur_prev, val)
+							}
+
+							prev_numbers = cur_prev
+							fmt.Println(prev_numbers)
+							fmt.Println()
+							valid = false
